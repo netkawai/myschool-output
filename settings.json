@@ -1,0 +1,20 @@
+[
+{
+    "name":"Sheet 1",
+    "start-row-data" : "2",
+    "row-header": "1",
+    "headers": 
+    [
+        {
+            "index":"1",
+            "name":"first-name",
+            "type":"string"
+        },
+        {
+            "index":"2",
+            "name":"last-name",
+            "type":"string"
+        }
+    ]
+}
+]
