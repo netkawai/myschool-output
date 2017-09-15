@@ -8,11 +8,16 @@
     [
         {
             "index":"1",
+            "name":"No",
+            "type":"integer"
+        },
+        {
+            "index":"2",
             "name":"first-name",
             "type":"string"
         },
         {
-            "index":"2",
+            "index":"3",
             "name":"last-name",
             "type":"string"
         }

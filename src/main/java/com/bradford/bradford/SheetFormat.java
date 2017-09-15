@@ -9,7 +9,7 @@ package com.bradford.bradford;
  *
  * @author kawai
  */
-public class WorkSheetFormat {
+public class SheetFormat {
     public String name;
     public int startDataRow;
     public int headerRow;
