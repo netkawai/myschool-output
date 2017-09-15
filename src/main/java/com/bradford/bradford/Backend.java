@@ -10,6 +10,7 @@ import com.almworks.sqlite4java.SQLiteStatement;
 import java.io.File;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -57,26 +58,37 @@ public class Backend{
         try
         {
             XSSFWorkbook workbook = new XSSFWorkbook(file);
-            for(SheetFormat layout : _layout.sheetFormats){
+            for(SheetFormat layout : _layout.sheets){
                XSSFSheet sheet = workbook.getSheet(layout.name);
-               XSSFRow headers = sheet.getRow(layout.headerRow); 
-               
-               for(ColumnHeader col : layout.headers){
-                   memberTable.addColumn(headers.getCell(col.index - 1).getStringCellValue());                    
-               }
+               if(sheet == null){
+                   System.out.print("Sheet is not Found:" + layout.name);
+               }else{
+                XSSFRow headers = sheet.getRow(layout.getheaderIndex()); 
 
-                int index = layout.startDataRow-1;
-                Vector<String> buf = new Vector();
-                for(XSSFRow row = sheet.getRow(index) ;
-                       !Utilities.isNullOrBlank(sheet.getRow(index).getCell(0).getStringCellValue()) 
-                        ; index++){
-                     buf.clear();
-                    for(ColumnHeader col : layout.headers){
-                        buf.add(sheet.getRow(index).getCell(col.index - 1).getStringCellValue());                            
-                    }
-                    memberTable.addRow(buf);                    
-                }        
-                System.out.println(workbook.getSheetAt(0).getSheetName());
+                for(ColumnHeader col : layout.headers){
+                    memberTable.addColumn(headers.getCell(col.getIndex()).getStringCellValue());                    
+                }
+
+                 int index = layout.getBeginDataIndex();
+                 Vector<String> buf = new Vector();
+                 for(XSSFRow row = sheet.getRow(index);
+                        sheet.getRow(index) != null && 
+                         !Utilities.isNullOrBlank(sheet.getRow(index).getCell(0)) 
+                         ; index++){
+                      buf.clear();
+                     for(ColumnHeader col : layout.headers){
+                         XSSFCell cell = sheet.getRow(index).getCell(col.getIndex());
+                         if(col.type.equals("int")){
+                             buf.add(Integer.toString(((Double)cell.getNumericCellValue()).intValue()));
+                         }else{
+                             buf.add(cell.getStringCellValue());                            
+                         }
+                     }
+                     memberTable.addRow(buf);                    
+                 }        
+                 System.out.println(workbook.getSheetAt(0).getSheetName());
+                   
+               }
             }
         }catch(Exception e){
             System.out.println(e);

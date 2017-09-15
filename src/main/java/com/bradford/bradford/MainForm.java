@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import javax.swing.table.DefaultTableModel;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
@@ -26,6 +27,26 @@ public class MainForm extends javax.swing.JFrame {
      */
     public MainForm() {
         initComponents();
+        try{
+                    String filePath = "C:/Users/kawai/Desktop/Bradford.xlsx";
+        String dbPath = "C:/Users/kawai/Desktop/bradford.db";
+
+        Path path = FileSystems.getDefault().getPath("C:/Users/kawai/NetBeansProjects/Bradford", "settings.json");
+        String contents = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
+
+        DataLayout layout =  new ObjectMapper().readValue(contents, DataLayout.class);        
+
+
+        Backend instance = new Backend(layout,dbPath);
+
+        
+        DefaultTableModel dataModel = instance.importFromFile(filePath);
+
+        jMemberTable.setModel(dataModel);
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 /*
         public static DefaultTableModel buildTableModel(ResultSet rs)
@@ -77,7 +98,7 @@ public class MainForm extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jMemberTable = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -94,7 +115,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jButton3.setText("jButton3");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jMemberTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -105,7 +126,7 @@ public class MainForm extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jMemberTable);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -191,11 +212,11 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTable jMemberTable;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

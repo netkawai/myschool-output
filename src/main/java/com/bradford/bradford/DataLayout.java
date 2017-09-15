@@ -10,5 +10,5 @@ package com.bradford.bradford;
  * @author kawai
  */
 public class DataLayout {
-    public SheetFormat[] sheetFormats;    
+    public SheetFormat[] sheets;    
 }

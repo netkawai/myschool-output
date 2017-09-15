@@ -13,5 +13,12 @@ public class SheetFormat {
     public String name;
     public int startDataRow;
     public int headerRow;
+
+    public int getBeginDataIndex(){
+        return startDataRow-1;
+    }
+    public int getheaderIndex(){
+        return headerRow-1;
+    }
     public ColumnHeader headers[];    
 }

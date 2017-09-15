@@ -6,15 +6,19 @@
 package com.bradford.bradford;
 
 import com.sun.istack.internal.Nullable;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+
 
 /**
  *
  * @author kawai
  */
 public class Utilities {
-    public static boolean isNullOrBlank(@Nullable CharSequence cs){
+        
+    public static boolean isNullOrBlank(@Nullable XSSFCell cell){
         int strLen;
-        if (cs == null || (strLen = cs.length()) == 0) {
+        String cs;
+        if (cell == null || ((cs = cell.getRawValue()) == null) || ((strLen = cs.length())  == 0)) {
             return true;
         }
         for (int i = 0; i < strLen; i++) {

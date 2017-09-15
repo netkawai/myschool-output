@@ -10,7 +10,10 @@ package com.bradford.bradford;
  * @author kawai
  */
 public class ColumnHeader {
-    public int index;
+    public int getIndex(){
+        return col -1;
+    }
+    public int col;
     public String name;
     public String type;
 }

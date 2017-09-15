@@ -1,23 +1,23 @@
 {
 "sheets":[
 {
-    "name":"Sheet 1",
+    "name":"Sheet1",
     "startDataRow" : "2",
     "headerRow": "1",
     "headers": 
     [
         {
-            "index":"1",
+            "col":"1",
             "name":"No",
-            "type":"integer"
+            "type":"int"
         },
         {
-            "index":"2",
+            "col":"2",
             "name":"first-name",
             "type":"string"
         },
         {
-            "index":"3",
+            "col":"3",
             "name":"last-name",
             "type":"string"
         }
