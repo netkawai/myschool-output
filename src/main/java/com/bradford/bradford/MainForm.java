@@ -5,6 +5,16 @@
  */
 package com.bradford.bradford;
 
+import com.almworks.sqlite4java.SQLiteConnection;
+import com.almworks.sqlite4java.SQLiteStatement;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 /**
  *
  * @author kawai
@@ -43,10 +53,50 @@ public class MainForm extends javax.swing.JFrame {
         return new DefaultTableModel(data, columnNames);
 
     }
+*/
+    
+    public static void testSqlite()
+    {
+        SQLiteConnection db = new SQLiteConnection(new File("/tmp/database"));
+        SQLiteStatement st = null;
+        try {
+            db.open(true);
+
+            st = db.prepare("SELECT order_id FROM orders WHERE quantity >= ?");
+
+            st.bind(1, 2);
+            while (st.step()) {
+              System.out.println(st.columnLong(0));
+            }
+        }catch(Exception e){
+            
+        } finally {
+            if(st != null)
+              st.dispose();
+        }
+        db.dispose();        
+    }
+    
+    public static void readFileFormat(){
+        try{
+        Path path = FileSystems.getDefault().getPath("C:/Users/kawai/NetBeansProjects/Bradford", "settings.json");
+        String contents = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
+
+        MemberListFormats sheetFormat = new ObjectMapper().readValue(contents, MemberListFormats.class);
+        
+        System.out.println(sheetFormat.sheets[0].name);
+        
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+    
     
     public static void testOpenExcel(){
         File file = new File("C:/Users/kawai/Desktop/Bradford.xlsx");
 
+        
+        
         try
         {
             XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -57,7 +107,7 @@ public class MainForm extends javax.swing.JFrame {
             System.out.println(e);
         }
     }
-*/
+
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -151,6 +201,9 @@ public class MainForm extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        readFileFormat();
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

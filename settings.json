@@ -1,8 +1,9 @@
-[
+{
+"sheets":[
 {
     "name":"Sheet 1",
-    "start-row-data" : "2",
-    "row-header": "1",
+    "startDataRow" : "2",
+    "headerRow": "1",
     "headers": 
     [
         {
@@ -18,3 +19,4 @@
     ]
 }
 ]
+}
