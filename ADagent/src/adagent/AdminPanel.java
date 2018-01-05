@@ -29,9 +29,8 @@ public class AdminPanel extends java.awt.Panel {
      */
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(adagent.ADagentApp.class).getContext().getResourceMap(AdminPanel.class);
+
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory(resourceMap.getString("entityManager.persistenceUnit")).createEntityManager(); // NOI18N
         query = java.beans.Beans.isDesignTime() ? null : ((javax.persistence.EntityManager)null).createQuery(resourceMap.getString("query.query")); // NOI18N
         list = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(query.getResultList());
@@ -50,28 +49,20 @@ public class AdminPanel extends java.awt.Panel {
 
         masterTable.setName("masterTable"); // NOI18N
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, list, masterTable);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
         masterScrollPane.setViewportView(masterTable);
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(adagent.ADagentApp.class).getContext().getActionMap(AdminPanel.class, this);
-        newButton.setAction(actionMap.get("newRecord")); // NOI18N
-        newButton.setName("newButton"); // NOI18N
 
-        deleteButton.setAction(actionMap.get("deleteRecord")); // NOI18N
         deleteButton.setName("deleteButton"); // NOI18N
 
         detailScrollPane.setName("detailScrollPane"); // NOI18N
 
-        detailTable.setBackground(resourceMap.getColor("detailTable.background")); // NOI18N
+//        detailTable.setBackground(resourceMap.getColor("detailTable.background")); // NOI18N
         detailTable.setName("detailTable"); // NOI18N
         detailScrollPane.setViewportView(detailTable);
 
-        deleteDetailButton.setAction(actionMap.get("deleteDetailRecord")); // NOI18N
         deleteDetailButton.setName("deleteDetailButton"); // NOI18N
 
-        newDetailButton.setText(resourceMap.getString("newDetailButton.text")); // NOI18N
+//        newDetailButton.setText(resourceMap.getString("newDetailButton.text")); // NOI18N
         newDetailButton.setName("newDetailButton"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -109,7 +100,6 @@ public class AdminPanel extends java.awt.Panel {
                 .addGap(174, 174, 174))
         );
 
-        bindingGroup.bind();
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -125,7 +115,6 @@ public class AdminPanel extends java.awt.Panel {
     private javax.swing.JButton newButton;
     private javax.swing.JButton newDetailButton;
     private javax.persistence.Query query;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
 }
