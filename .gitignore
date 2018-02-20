@@ -1,6 +1,6 @@
 build
 dist
-product
+out
 *.class
 /.metadata
 /.recommenders
