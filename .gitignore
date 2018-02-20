@@ -1,5 +1,6 @@
 build
 dist
+product
 *.class
 /.metadata
 /.recommenders
