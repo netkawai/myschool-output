@@ -1,8 +1,5 @@
-target/
-nbproject/
-build/
-dist/
-*.project
+build
+dist
 *.class
 /.metadata
 /.recommenders
