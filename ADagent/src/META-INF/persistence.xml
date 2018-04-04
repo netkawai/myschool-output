@@ -10,8 +10,8 @@
     <properties>
       <property name="toplink.jdbc.user" value="sa"/>
       <property name="toplink.jdbc.password" value="aptech"/>
-      <property name="toplink.jdbc.url" value="jdbc:sqlserver://127.0.0.1:1433;databaseName=ADagent"/>
-      <property name="toplink.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="toplink.jdbc.url" value="jdbc:sqlserver://127.0.0.1:3306;databaseName=ADagent"/>
+      <property name="toplink.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
     </properties>
   </persistence-unit>
 </persistence>
