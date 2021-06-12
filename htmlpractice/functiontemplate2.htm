@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function cal_circle_area()
+{
+	return (this.radius*this.radius*3.14);
+}
+
+function circle(radius)
+{
+	this.radius = radius;
+	this.get_area = cal_circle_area;
+	this.get_diameter = function ()
+	{
+		return this.radius*2;
+	};
+}
+var circle = new circle(10); // Create the object
+document.write('Diameter:' + circle.get_diameter() + '<br/>' + 'Area:' + circle.get_area());
+</script>
+</head>
+<body>
+</body>
+</html>

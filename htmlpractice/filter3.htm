@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Trasitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Applying Filters</title>
+<script type="text/javascript">
+function applyFilter()
+{
+	document.getElementById('summer').style.filter =
+	"progid:DXImageTransform.Microsoft.BasicImage
+	(grayscale=1, xray=1, opacity=0.90, rotation=3)";
+	
+	document.getElementById('winter').style.filter =
+	"progid:DXImageTransform.Microsoft.Alha(opacity=40)";
+}
+</script>
+</head>
+<body onload="applyFilter();">
+<img id="summer" src="summer.jpg"></img>
+<img id="winter" src="winter.jpg"></img>
+</body>
+</html>

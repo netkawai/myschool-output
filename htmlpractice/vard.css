@@ -1,0 +1,8 @@
+.VCard
+{
+	width: 200px;
+	height: 150px;
+	border: solid thin red;
+	background-color: #FFFFCC;
+	padding: 10px;
+}

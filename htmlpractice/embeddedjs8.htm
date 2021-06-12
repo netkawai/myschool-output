@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitonal//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript">
+var age = parseInt(prompt("Enter age", "Age"));
+var boolvalue = true;
+var name = "John";
+var status = ((typeof(age) == "number") && (age >= 18)) ? "eligible" : "not eligible";
+
+alert('You are ' + age + ' years old. So, you are ' + status + ' to vote.');
+
+document.write("type of age = " + typeof(age) + "<br/>");
+document.write("type of name = " + typeof(name) + "<br/>" );
+document.write("type of bool value = " + typeof(boolvalue) + "<br/>");
+
+document.write("boolean result of age = " +  isNaN(age) + "<br/>");
+document.write("boolean result of name = " + isNaN(name) + "<br/>");
+
+</script>
+</head>
+<body>
+</body>
+</html>

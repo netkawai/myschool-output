@@ -1,0 +1,9 @@
+#heading
+{
+	background: #FFFFCC;
+	text-align: center;
+	border-left-style: ridge;
+	border-right-style: groove;
+	border-top-style: dashed;
+	border-bottom-style: double;
+}

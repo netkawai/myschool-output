@@ -1,0 +1,13 @@
+BODY
+{
+	background-image: url('backtexture.jpg');
+	background-position: left;
+	background-color: #FFFFCC;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+}
+
+.contents
+{
+	text-indent: 5em;
+}

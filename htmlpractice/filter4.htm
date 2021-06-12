@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Applying Filter</title>
+<style type="text/css">
+#speed
+{
+	width: 100%;
+	filter: progid:DXImageTransform.Microsoft.MotionBlur
+	(strength = 50, Direction = 90, Add = true);
+}
+</style>
+<script type="text/javascript">
+function applyFilter()
+{
+	document.getElementById('ford').style.filter =
+	"progid:DXImageTransform.Microsoft.Light()";
+	document.getElementById('ford').filters.item(0).addCone
+	(300,0,1,0,200,255,255,255,25,40);
+}
+</script>
+</head>
+<body onLoad="applyFilter();">
+<div id="label"><h1>Welcome to JK Automobiles</h1></div>
+<div><h4>Manufactures of Cars and Bikes</h4></div>
+<div id="speed"><h4>Cars specialist</h4></div>
+<img id="ford" src=ford.jpg></img>
+</body>
+</html>

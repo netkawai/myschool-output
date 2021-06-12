@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ADagent">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/dist/ADagent.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

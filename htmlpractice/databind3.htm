@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Products</title>
+</head>
+<body>
+<object id="objProducts"
+classid="CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83">
+<param name="DataURL" value="databind1.csv" />
+<param name="UseHeader" value="True" />
+</object>
+<table datasrc="#objProducts">
+<thead><tr><td>Serial Number</td><td>Students Name</td></tr></thead>
+<tbody>
+<tr><td><span datafld="SID"></span></td><td><span datafld="Name"></span></td></tr>
+</tbody>
+</table>
+</body>
+</html>

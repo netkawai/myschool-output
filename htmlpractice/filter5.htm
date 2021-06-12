@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<tile>Applying Transitions</title>
+<style type="text/css">
+#summer
+{
+	width: 80%;
+	filter: progid:DXImageTransform.Microsoft.Iris
+			(Duration = 2, IrisStyle = 'Star', Motion = 'out');
+}
+</style>
+<script type="text/javascript">
+function applyIris()
+{
+	document.getElementById('summer').filters.item(0).apply();
+	document.getElementById('summer').innerHTML = '<img src="summer.jpg"/>';
+	document.getElementById('summer').filters.item(0).play();
+}
+</script>
+</head>
+<body onload="applyIris();">
+<div id="summer">Loading the Summer Image</div>
+</body>
+</html>

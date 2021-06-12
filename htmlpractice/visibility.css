@@ -1,0 +1,9 @@
+#Car
+{
+	visibility: hidden;
+}
+.photo
+{
+	border: dashed thin red;
+	width: 275px;
+}

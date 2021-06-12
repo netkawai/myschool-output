@@ -1,0 +1,38 @@
+.tips
+{
+	display: block;
+	text-index: 10px;
+}
+.heading
+{
+	display: block;
+	font-size: large;
+	font-weight: bold;
+}
+.moretip
+{
+	display: inline;
+}
+a:link
+{
+	color: white;
+	background-color: black;
+	border: 2px solid white;
+}
+a:visited
+{
+	color: white;
+	background-color: brown;
+	border: 2px solid white;
+}
+
+a:hover
+{
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+}
+#ProductOne,#ProductTwo
+{
+	visibility: hidden;
+}

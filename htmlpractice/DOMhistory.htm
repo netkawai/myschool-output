@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitonal//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Car Gallery</title>
+<script type="text/javascript">
+function display_ford()
+{
+	document.writeln('<h3>Ford</h3>');
+	document.writeln('<div><img src="ford.jpg" alt="FORD"/></div>');
+	document.writeln('<input type="button" onclick="javascript:history.back();" value="Go Back"/>');
+}
+function display_ferrari()
+{
+	document.writeln('<h3>Ferrari</h3>');
+	document.writeln('<div><img src="ferrari.jpg" alt="Ferrai"/></div>');
+	document.writeln('<input type="button" onclick="javascript:history.go(-1);" value="Go Back"/>');
+}
+</script>
+</head>
+<body>
+<h2>Car Gallery</h2>
+<p><span style="cursor:pointer;border:solid thin red:background-color:#FFFFCC"
+onclick="display_ford();">Ford</span></p>
+<p><span style="cursor:pointer;border:solid thin red;background-color:#FFFFCC"
+onclick="display_ferrari();">Ferrari</span></p>
+</body>
+</html>

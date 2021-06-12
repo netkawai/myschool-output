@@ -1,0 +1,5 @@
+Lecture Memorundum
+
+Some tags don't have the class attribute.
+
+Protocol is a rule or a regularation to comunicate between client and server.

@@ -1,0 +1,20 @@
+BODY
+{
+	background-color: #FFFFCC;
+}
+.shadow
+{
+	position: absolute;
+	z-index: 1;
+	font-size: medium;
+}
+.text
+{
+	position: absolute;
+	z-index: 2;
+	left: 5px;
+	color: red;
+/*	font-size: larger;*/
+	font-size: medium;
+}
+

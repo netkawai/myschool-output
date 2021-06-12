@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_MainBrand" value="name:productId;datatype:3,name:ModelName;datatype:200,name:Brand;datatype:200,name:Price;datatype:6,name:Description;datatype:200,name:Design;datatype:130" />
+	<infoitem key="UD_SubBrand1" value="name:productId;datatype:3,name:ModelName;datatype:200,name:Brand;datatype:200,name:Price;datatype:6,name:Description;datatype:200,name:Design;datatype:130" />
+	<infoitem key="UD_SubBrand2" value="name:productId;datatype:3,name:ModelName;datatype:200,name:Brand;datatype:200,name:Price;datatype:6,name:Description;datatype:200,name:Design;datatype:130" />
+</info>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Products</title>
+</head>
+<body>
+<!-- The "Tabular Data Control" is a Microsoft ActiveX control 
+that's built into Microsoft Internet Explorer. 
+Using this object, it is possible to extract ordered (delimited) 
+contents from an ASCII (normally we use the .txt extension) 
+file into HTML elements. 
+
+The ActiveX control is initialized using the <OBJECT> tag. 
+The CLASSID (unique identifier) for the tabular data control is:
+CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83
+
+-->
+<object id="objProducts"
+classid="CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83">
+<param name="DataURL" value="databind1.txt" />
+<param name="UseHeader" value="True" />
+</object>
+<input id="txtSID" datasrc="#objProducts" datafld="SID" />
+<input id="txtDescription" datasrc="#objProducts" datafld="Name" />
+<input id="cmdNext" type="button" value="Next"
+onclick="objProducts.recordset.MoveNext();" />
+</body>
+</html>

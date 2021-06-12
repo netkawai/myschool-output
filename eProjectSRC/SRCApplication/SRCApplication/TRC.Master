@@ -1,0 +1,36 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TRC.master.cs" Inherits="WebApplication.TRC" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>SRC Travel Agency System</title>
+    <link rel="stylesheet" type="text/css" href="./layout.css" />
+</head>
+<body>
+    <div id="Container">
+        <div id="Header">
+            SRC Travel Agency Maintance Mode
+        </div>
+
+        <div id="NavBar">
+            <b>Menu:</b>
+            <ul>
+                <li><a href="Employee.aspx">Employees</a></li>
+                <li><a href="City.aspx">Cities</a></li>
+                <li><a href="Bus.aspx">Buses</a></li>
+            <!--<li><a href="Logout.aspx">Logout</a></li>-->
+            </ul>
+        </div>
+
+        <div id="PageContent">
+            <br />
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+        <div id="Footer">
+            Copyright (C) Cooking: SRC Travel Agency,Inc. 2011. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

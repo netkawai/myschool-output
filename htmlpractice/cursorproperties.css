@@ -1,0 +1,12 @@
+BODY
+{
+	cursor: crosshair;
+}
+INPUT
+{
+	cursor: text;
+}
+.addcart
+{
+	cursor: hand;
+}

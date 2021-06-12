@@ -1,0 +1,9 @@
+BODY
+{
+	text-align: center;
+}
+.carmode
+{
+	border-style: solid;
+	border-color: Red Blue Green Yellow;
+}

@@ -1,0 +1,12 @@
+"SalesID","OrderQty","ProductID","UnitPrice"
+1,12,"Condiments", 435
+2,3,"Exam", 421
+3,4,"Aid" , 110
+4,57,"Condiments", 210
+5,34,"reason for", 495
+6,56,"Test", 8596
+7,1,"Exam", 10000
+8,98,"Aid" , 2094
+9,7,"Beverages", 239
+10,8,"reason for", 214
+11,14,"compromise", 60

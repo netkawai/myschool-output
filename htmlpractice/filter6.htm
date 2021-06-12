@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Applying Filters</title>
+<style type="text/css">
+#welcome
+{
+	width: 80%;
+	filter: progid:DXImageTransform.Microsoft.Barn
+	(Duration = 5, Motion = in, Orientation = 'vertical');
+}
+</style>
+<script type="text/javascript">
+function applyBarn()
+{
+	document.getElementById('welcome').filters.item(0).apply();
+	document.getElementById('welcome').style.color = 'Blue';
+	document.getElementById('welcome').innerHTML =
+	'<B>Pixel Solutions Ltd</B><br/>We serve to grow and make IT better!';
+	
+	document.getElementById('welcome').filters.item(0).play();
+}
+</script>
+</head>
+<body onload="applyBarn()";>
+<div id="welcome"><p>Welcome to ...</p></div>
+</body>
+</html>

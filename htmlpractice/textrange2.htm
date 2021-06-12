@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+function findSelected() {  
+    if(window.getSelection) {  
+		alert('window.getSelection');
+        return window.getSelection();  
+    }
+    else if(document.getSelection) {  
+		alert('document.getSelection');
+        return document.getSelection(); 
+    }  
+    else { 
+        var selection = document.selection && document.selection.createRange();  
+
+        if(selection.text) {  
+			alert('document.selection.createRange()');
+            return selection.text; 
+        }
+    }  
+	alert("Can't get the selection text from this browser.");
+    return false;  
+}  
+
+function getSelectedText() {  
+    var selected = findSelected();  
+	if(selected && selected == 'Mall') {
+		alert('You select Shopping Mall');
+	}
+	else{
+		alert('You select other');
+	}
+} 
+</script>
+</head>
+<body onmouseup="getSelectedText()";>
+Welcome to the Planet Mall MALL !!
+</body>
+</html>

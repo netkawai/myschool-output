@@ -1,0 +1,15 @@
+UL
+{
+	list-style-type: square;
+	list-style-position: inside;
+	list-style-image: url('right_arrow.png');
+}
+
+TEXTAREA
+{
+	scrollbar-base-color: gray;
+	scrollbar-arrow-color: green;
+	scrollbar-face-color: yellow;
+	scrollbar-shadow-color: blue;
+	scrollbar-track-color: pink;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Products</title>
+</head>
+<body>
+<!-- The "Tabular Data Control" is a Microsoft ActiveX control 
+that's built into Microsoft Internet Explorer. 
+Using this object, it is possible to extract ordered (delimited) 
+contents from an ASCII (normally we use the .txt extension) 
+file into HTML elements. 
+
+The ActiveX control is initialized using the <OBJECT> tag. 
+The CLASSID (unique identifier) for the tabular data control is:
+CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83
+
+-->
+<object id="objSales"
+classid="CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83">
+<param name="DataURL" value="databind7.txt" />
+<param name="UseHeader" value="True" />
+</object>
+Order ID:<input datasrc="#objSales" datafld="SalesID" /><br/>
+Order Qty:<input datasrc="#objSales" datafld="OrderQty" /><br/>
+Product ID:<input datasrc="#objSales" datafld="ProductID" /><br/>
+UnitPrice:<input datasrc="#objSales" datafld="UnitPrice" /><br/>
+<input id="btnFirst" type="button" value="First"
+onclick="objSales.recordset.MoveFirst();" />
+
+<input id="btnPreivous" type="button" value="Previous"
+onclick="if(!objSales.recordset.BOF) objSales.recordset.MovePrevious();" />
+
+<input id="btnNext" type="button" value="Next"
+onclick="if(!objSales.recordset.BOF) objSales.recordset.MoveNext();" />
+
+<input id="btnLast" type="button" value="Last"
+onclick="objSales.recordset.MoveLast();" />
+
+</body>
+</html>
+

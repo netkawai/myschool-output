@@ -1,0 +1,21 @@
+.banner
+{
+	text-align: center;
+	border-style: solid;
+	/*
+	background-color: sliver;
+	border-right-style: none;
+	border-left-style: none;
+	border-top-width: thick;
+	border-bottom-widht: thick;
+	*/
+	/*
+	border-width: thick thin thick thin;
+	*/
+	background-color: #FFFFCC;
+	border-top: dashed thin #FF0000;
+	border-bottom: ridge thick blue;
+	border-right: dotted thin green;
+	border-left: inset meidum rgb(255,0,255);
+	font-family: Algerian;
+}

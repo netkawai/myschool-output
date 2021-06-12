@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitonal//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Nature Photo Gallery</title>
+<script type="text/javascript" src="mouseevent.jp">
+</script>
+</head>
+<body onload="document.getElementById('imgPhoto').style.visiblity=
+'hidden';">
+<table>
+<tr>
+<td colspan="3" aling="center"><h2>Nature Photo</h2></td>
+</tr>
+<tr>
+<td align="center"><a href="#" onmousemove="displayImage('summer.jpg');"
+omounseout="hideImage();">Image 1</td>
+<td align="center"><a href="#" onmousemove="displayImage('autum.jpg');"
+onmouseout="hideImage():">Image 2</td>
+<td align="center"><a href="#" onmousemove="displayImage('winter.jpg');"
+onmouseout="hideImage();">Image 3</td>
+</tr>
+<tr>
+<td colspan="3" aling="center"><img id="imgPhoto" src="summer.jpg" atl="Nature"/></td>
+</tr>
+</table>
+</body>
+</html>

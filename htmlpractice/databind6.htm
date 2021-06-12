@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Products</title>
+<script type="text/javascript">
+function showAll()
+{
+	objCategories.Filter = '*';
+	objCategories.Reset();
+}
+</script>
+</head>
+<body>
+<!-- The "Tabular Data Control" is a Microsoft ActiveX control 
+that's built into Microsoft Internet Explorer. 
+Using this object, it is possible to extract ordered (delimited) 
+contents from an ASCII (normally we use the .txt extension) 
+file into HTML elements. 
+
+The ActiveX control is initialized using the <OBJECT> tag. 
+The CLASSID (unique identifier) for the tabular data control is:
+CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83
+
+-->
+<object id="objCategories"
+classid="CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83">
+<param name="DataURL" value="databind6.txt" />
+<param name="UseHeader" value="True" />
+<param name="Filter"
+value="(CategoryName=Condiments) | (CategoryName=Beverages)" />)
+</object>
+<table id="tblCategories" datasrc="#objCategories" border=1>
+<thead><td>CategoryID</td><td>Name</td><td>Description</td></thead>
+<tbody>
+<td><span datafld="CategoryId"></span></td>
+<td><span datafld="CategoryName"></span></td>
+<td><span datafld="Description"></span></td>
+</tbody>
+</table>
+<input type="button" value="All" onclick="showAll()" />
+</body>
+</html>

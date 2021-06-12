@@ -1,0 +1,14 @@
+table
+{
+	background-color: #FFFFCC;
+	border: 1px solid red;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+td
+{
+/*	border: 1px solid green; */
+	padding-left: 4px;
+	padding-right: 4px;
+}

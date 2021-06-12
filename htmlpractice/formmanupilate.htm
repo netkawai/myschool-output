@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Top Three Companies</title>
+<script type="text/javascript">
+function initialize()
+{
+	frmCompanies.selCompanies.options.length=0; // Clears the options wihin the default form.
+	frmCompanies.selCompanies.options[0] = new Option('ISO','http://www.iso.org', true, false);
+	frmCompanies.selCompanies.options[1] = new Option('Yahoo', 'http://www.yahoo.com', false, false);
+	frmCompanies.selCompanies.options[2] = new Option('Google', 'http://www.google.com', false, false);
+	alert('frmCompanies.selCompanies.options is Array?:' + Array.isArray(frmCompanies.selCompanies.options));
+	var frmArray = new Array(3);
+	var i = frmArray.length;
+	for(i in frmArray)	{
+		alert('I dont know a reason, however this statement is skipping.');
+	}
+	
+	while(i-- > 0) frmArray[i] = 0;
+	alert('frmArray isArray?: ' +  Array.isArray(frmArray) + ' isEnumerable?:' + propertyIsEnumerable(frmArray));
+	for(i in frmArray)
+	{
+		frmArray[i] = frmCompanies.selCompanies.options[i];
+		alert('index:' + i + ' text:[' + frmArray[i].text + ']');
+	}
+}
+</script>
+</head>
+<body onload="initialize();">
+<h2>Top Three Companies</h2>
+<form id="frmCompanies" method="POST" action="">
+<label for="selCompanies">Select any one:</label>
+<select id="selCompanies">
+<option value="http://www.w3.org">W3C</option>
+<option value="http://www.wikipeida.org">Wikipedia</option>
+</select>
+<button>Show Detials</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitonal//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript">
+
+function cal_salary()
+{
+	return this.age*100;
+}
+
+
+function Employee(firstName, lastName, age)
+{
+	this.firstName = firstName;
+	this.lastName  = lastName;
+	this.age = age;
+	this.cal_salary = cal_salary;
+}
+
+function Employer()
+{
+	this.cal_salary = cal_salary;
+}
+
+// These definitons provide staic value definitons.
+// They are a similar with static value. However,
+// this object can refer these properties.
+Employer.prototype.firstName = 'Mary'; 
+Employer.prototype.lastName = 'Fernands';
+Employer.prototype.graduate = 'Science MBA';
+Employer.prototype.age = 60;
+
+function showEmployee()
+{
+	// you should put this statement before creating the object.
+	// this statemenet add the new property for objects
+	Employee.prototype.graduate = 'MBA-IT';
+	var empJames = new Employee('James','George', 24);
+	document.write('Employee:' + empJames.lastName + ',' + empJames.graduate + ',' + empJames.cal_salary() + '<br/>');
+
+	var empOfficer = new Employee('Baigu','Kuma', 28);
+	document.write('Employee:' + empOfficer.lastName + ',' + empOfficer.graduate + 
+	'Age:' + Employee.prototype.age + ',' + empOfficer.cal_salary() + "<-We can't refer Employee.prototype.age" + '<br/>');
+
+	var ceo = new Employer();
+	ceo.bachelor = 'Dactor';
+	document.write('CEO:' + Employer.prototype.lastName + ',' + ceo.graduate + ',' + ceo.bachelor + ':' +
+					'Age:' + ceo.age + ',' + ceo.cal_salary() + '<-This object can refer the Employer.protype.protery[age].' + '<br/>');
+
+	var cto = new Employer();
+	cto.lastName = 'Thomas';
+	cto.graduate = 'Master';
+	cto.age = 30; // To create property for instance of cto
+
+	document.write('CTO:' + Employer.prototype.lastName + ',' +  cto.firstName + ','+ cto.graduate + ',' + cto.bachelor + ':' +
+					'Age:' +  Employer.prototype.age + ',' + cto.cal_salary() + 
+					'<-However The object separately store the prototype and this proerty:' + cto.lastName + ',' + cto.age + '<br/>');
+}
+showEmployee();
+</script>
+</head>
+<body>
+</body>
+</html>

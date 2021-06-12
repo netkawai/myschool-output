@@ -1,0 +1,27 @@
+<html>
+<head>
+<script text="text/javascript">
+function Employee(personlInfo)
+{
+	this.personalInfo = personalInfo;
+}
+function createEmployeeInfo()
+{
+	var personalInfo = new Array('George', 'Owner', 'IT Manager');
+	var employeeOne = new Employee(personalInfo);
+	displayEmployeeInfo(employeeOne);
+}
+
+function displayEmployeeInfo(employee)
+{
+	with(employee)
+	{
+		document.writeln(personalInfo[0] + ' ' + personalInfo[1] +
+		' ' + personalInfo[2]);
+	}
+}
+</script>
+</head>
+<body>
+</body>
+</html>

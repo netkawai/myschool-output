@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+var products = new Array(2);
+products[0] = new Array('Monitor', 236.75);
+products[1] = new Array('Keyboard',45.50);
+document.writeln('<table border=1><tr><th>type</th><th>Name</th><th>type</th><th>Price</th></tr>');
+for(var i = 0 ; i < products.length ; i++)
+{
+	document.write("<tr>");
+	for(var j = 0 ; j < products[i].length ; j++)
+	{
+		document.writeln("<td>" + typeof(products[i][j]) + "</td>");
+		document.write("<td>" + products[i][j] + "</td>");
+	}
+	document.write("</tr>");
+
+}
+document.writeln('</table>');
+</script>
+</head>
+<body>
+</body>
+</html>

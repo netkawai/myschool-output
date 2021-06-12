@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="BookDetails2.xslt" ?>
+<Catalog xmlns="http://tempuri.org/XMLSchema.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://tempuri.org/XMLSchema.xsd BookSchema.xsd">
+  <Book>
+    <Author>Gambradella, Matthew</Author>
+    <Title>XML Developer's Guide</Title>
+    <Genre>Computer</Genre>
+    <Book>
+    	<ISDB>123-456-789</ISDB>
+    </Book>
+    <Price>44.95</Price>
+    <Publish>2000-10-01</Publish>
+    <Description>qwerty</Description>
+  </Book>
+  <Book>
+    <Author>Jeffery</Author>
+    <Title>Speech Pattern</Title>
+    <Genre>Geographical Thought</Genre>
+    <Price>435.10</Price>
+    <Publish>2003-12-31</Publish>
+    <Description>asdfg</Description>
+  </Book>
+</Catalog>

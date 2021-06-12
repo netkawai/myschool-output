@@ -1,0 +1,12 @@
+p:first-line
+{
+	font-family: "Tahoma";
+	font-weight: bolder;
+	background-color: #FFFFCC;
+}
+p:first-letter
+{
+	font-family: "Algerian";
+	font-size: xx-large;
+	font-weight: bold;
+}
