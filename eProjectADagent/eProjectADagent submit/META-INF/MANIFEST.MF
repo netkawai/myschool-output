@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Ant-Version: Apache Ant 1.8.1
-Created-By: 1.6.0_20-b02 (Sun Microsystems Inc.)
-Main-Class: adagent.ADagentApp
-Class-Path: lib/appframework-1.0.3.jar lib/swing-worker-1.1.jar lib/be
- ansbinding-1.2.1.jar lib/toplink-essentials.jar lib/toplink-essential
- s-agent.jar lib/sqljdbc.jar
-X-COMMENT: Main-Class will be added automatically by build
-
