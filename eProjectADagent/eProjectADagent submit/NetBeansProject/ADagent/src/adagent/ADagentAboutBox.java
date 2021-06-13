@@ -4,7 +4,6 @@
 
 package adagent;
 
-import org.jdesktop.application.Action;
 
 public class ADagentAboutBox extends javax.swing.JDialog {
 
